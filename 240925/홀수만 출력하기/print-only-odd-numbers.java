@@ -12,7 +12,7 @@ public class Main {
         }
 
         for(int i=0; i<N; i++){
-            if(list.get(i)%3==0){
+            if(list.get(i)%2!=0 && list.get(i)%3==0){
                 System.out.println(list.get(i));
             }
         }
