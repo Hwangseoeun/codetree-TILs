@@ -1,20 +1,20 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+        
+        // 변수 선언
+        int n;
 
-        List<Integer> list = new ArrayList<>();
-        for(int i=0; i<N; i++){
-            int num = sc.nextInt();
-            list.add(num);
-        }
+        // 입력
+        n = sc.nextInt();
 
-        for(int i=0; i<N; i++){
-            if(list.get(i)%2!=0 && list.get(i)%3==0){
-                System.out.println(list.get(i));
-            }
+        for(int i = 1; i <= n; i++) {
+            int a;
+            a = sc.nextInt();
+            if(a % 2 == 1 && a % 3 == 0)
+                System.out.println(a);
         }
     }
 }
