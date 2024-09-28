@@ -17,25 +17,24 @@ public class Main {
         System.out.print(count);
     }
 
-    public static boolean hasNumber(int i){
-        String[] strNumArray = Integer.toString(i).split(""); 
+    public static boolean hasNumber(int num){
+        String[] strNumArray = new String[7];
+        strNumArray = Integer.toString(num).split(""); 
     
-        List<String> num = Arrays.asList(strNumArray);
+        for(int i=0; i<strNumArray.length; i++){
+            if(strNumArray[i].equals("3") || strNumArray[i].equals("6") || strNumArray[i].equals("9")){
+                return true;
+            }
+        }
 
-        if(num.contains("3") || num.contains("6") || num.contains("9") || multiple(i)){
+        if(multiple(num)){
             return true;
         }
-        else{
-            return false;
-        }
+
+        return false;
     }
 
-    public static boolean multiple(int i){
-        if(i%3==0){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public static boolean multiple(int num){
+        return num%3==0;
     }
 }
