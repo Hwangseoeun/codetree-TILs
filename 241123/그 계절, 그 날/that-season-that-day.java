@@ -9,6 +9,7 @@ public class Main {
         int D = sc.nextInt();
 
         if((judgeYoon(Y) && D<=29) || (!judgeYoon(Y) && D<=judgeDayCount(M))){
+            System.out.println(judgeYoon(Y));
             System.out.println(judgeWeather(M));
         }
 
@@ -18,7 +19,7 @@ public class Main {
     }
 
     static boolean judgeYoon(int Y){
-        if(Y%4==0 || Y%100==0 && Y%400==0){
+        if(Y%4==0 && Y%100!=0 || Y%400==0){
             return true;
         }
         return false;
@@ -26,6 +27,9 @@ public class Main {
 
     static int judgeDayCount(int M){
         switch(M){
+            case 2:
+                return 28;
+
             case 1:
             case 3:
             case 5:
@@ -35,7 +39,6 @@ public class Main {
             case 12:
                 return 31;
 
-            case 2:
             case 4:
             case 6:
             case 9:
