@@ -9,7 +9,6 @@ public class Main {
         int D = sc.nextInt();
 
         if((judgeYoon(Y) && D<=29) || (!judgeYoon(Y) && D<=judgeDayCount(M))){
-            System.out.println(judgeYoon(Y));
             System.out.println(judgeWeather(M));
         }
 
