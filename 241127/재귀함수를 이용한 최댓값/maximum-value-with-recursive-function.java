@@ -23,10 +23,7 @@ public class Main {
             return a[0];
         }
 
-        if(findMax(n-1)>a[n-1]){
-            max = findMax(n-1);
-        }
-        else{
+        if(findMax(n-1)<a[n-1]){
             max = a[n-1];
         }
 
