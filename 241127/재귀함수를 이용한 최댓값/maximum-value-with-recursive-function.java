@@ -19,12 +19,16 @@ public class Main {
     }
 
     public static int findMax(int n){
-        if(n == 0){
+        if(n == 1){
             return a[0];
         }
 
-        if(findMax(n-1)<a[n-1]){
+        int num = findMax(n-1);
+        if(num<a[n-1]){
             max = a[n-1];
+        }
+        else{
+            max = num;
         }
 
         return max;
