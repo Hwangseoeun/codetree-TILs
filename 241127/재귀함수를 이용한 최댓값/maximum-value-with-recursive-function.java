@@ -15,18 +15,19 @@ public class Main {
             a[i] = sc.nextInt();
         }
 
-        System.out.print(findMax(n-1));
+        System.out.print(findMax(n));
     }
 
-    public static int findMax(int idx){
-        if(idx == 1){
+    public static int findMax(int n){
+        if(n == 0){
             return a[0];
         }
 
-        findMax(idx-1);
-
-        if(a[idx-1]>a[idx]){
-            max = a[idx-1];
+        if(findMax(n-1)>a[n-1]){
+            max = findMax(n-1);
+        }
+        else{
+            max = a[n-1];
         }
 
         return max;
