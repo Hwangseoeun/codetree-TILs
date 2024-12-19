@@ -6,23 +6,23 @@ public class Main {
 
         int N = sc.nextInt();
 
-        int[] num = new int[N];
+        int size = 2*N;
 
-        for(int i=0; i<N; i++){
+        int[] num = new int[size];
+
+        for(int i=0; i<size; i++){
             num[i] = sc.nextInt();
         }
 
         Arrays.sort(num);
 
-        int[] sumList = new int[N/2];
-        for(int i=0; i<N; i++){
-            for(int j=0; j<N/2; j++){
-                sumList[j] = num[i] + num[N-1-i];
-            }
+        int[] sumList = new int[size/2];
+        for(int i=0; i<size/2; i++){
+            sumList[i] = num[i] + num[size-1-i];
         }
 
         Arrays.sort(sumList);
 
-        System.out.print(sumList[N/2-1]);
+        System.out.print(sumList[size/2-1]);
     }
 }
