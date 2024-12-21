@@ -17,7 +17,7 @@ public class Main {
 
         int cnt = 0;
         for(int i=0; i<n; i++){
-            if(word[i].contains(T)){
+            if(word[i].indexOf(T) == 0){
                 cnt++;
             }
             if(cnt == k){
