@@ -10,7 +10,7 @@ public class Main {
 
         String[] word = new String[n];
         for(int i=0; i<n; i++){
-            word[i] = sc.nextLine();
+            word[i] = sc.next();
         }
 
         Arrays.sort(word);
@@ -21,7 +21,7 @@ public class Main {
                 cnt++;
             }
             if(cnt == k){
-                System.out.print(word[i]);
+                System.out.println(word[i]);
             }
         }
     }
