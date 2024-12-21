@@ -22,6 +22,7 @@ public class Main {
             }
             if(cnt == k){
                 System.out.println(word[i]);
+                break;
             }
         }
     }
