@@ -5,18 +5,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
+        int num = n;
 
         int cnt = 0;
         for(int i=1; i<=5000; i++){
-            if(n/i == 0){
-                System.out.print(cnt+1);
+            if(num <= 1){
+                System.out.print(cnt);
                 break;
             }
-            else{
-                n = n/i;
-                cnt++;
-                continue;
-            }
+            num = num/i;
+            cnt++;
         }
     }
 }
