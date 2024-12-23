@@ -10,9 +10,17 @@ public class Main {
             agents[i] = new Agent(sc.next(), sc.nextInt());
         }
 
-        Arrays.sort(agents, Comparator.comparingInt(a -> a.score));
+        int min = 100;
+        for(Agent a : agents){
+            min = Math.min(min, a.score);
+        }
 
-        System.out.println(agents[0].codeName + " " + agents[0].score);
+        for(Agent a : agents) {
+            if(a.score == min){
+                System.out.println(a.codeName + " " + a.score);
+                break;
+            }
+        }
     }
 }
 
