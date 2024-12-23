@@ -10,7 +10,7 @@ public class Main {
             agents[i] = new Agent(sc.next(), sc.nextInt());
         }
 
-        Arrays.sort(agents, (a1, a2) -> a1.score - a2.score);
+        Arrays.sort(agents, Comparator.comparingInt(a -> a.score));
 
         System.out.println(agents[0].codeName + " " + agents[0].score);
     }
