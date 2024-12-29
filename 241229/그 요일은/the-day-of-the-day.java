@@ -28,7 +28,7 @@ public class Main {
         int num = 0;
         switch(A) {
             case "Mon":
-                num = 6;
+                num = 1;
                 break;
             case "Tue":
                 num = 2;
