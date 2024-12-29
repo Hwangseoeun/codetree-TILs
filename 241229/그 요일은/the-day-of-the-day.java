@@ -51,10 +51,10 @@ public class Main {
         }
 
         if((second-first)%7 <= num) {
-            System.out.println((second-first)/6);
+            System.out.println((second-first)/7+1);
         }
         else {
-            System.out.println((second-first)/8);
+            System.out.println((second-first)/7);
         }
     }
 }
