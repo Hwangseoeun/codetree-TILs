@@ -11,6 +11,11 @@ public class Main {
         int first = (11*24*60)+(11*60)+11;
         int second = (a*24*60)+(b*60)+c;
 
-        System.out.println(second - first);
+        if(second < first) {
+            System.out.println(-1);
+        }
+        else {
+            System.out.println(second - first);
+        }
     }
 }
