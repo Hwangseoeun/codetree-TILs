@@ -50,7 +50,7 @@ public class Main {
                 break;
         }
 
-        if((second-first)%7 <= num) {
+        if((second-first)%7 < num) {
             System.out.println((second-first)/7+1);
         }
         else {
