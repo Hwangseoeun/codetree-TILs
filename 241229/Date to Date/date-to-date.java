@@ -20,7 +20,7 @@ public class Main {
             result = result - d1 + d2 + 1;
         }
         else {
-            result = d2 - d1;
+            result = d2 - d1 + 1;
         }
 
         System.out.println(result);
