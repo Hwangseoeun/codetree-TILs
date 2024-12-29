@@ -50,11 +50,13 @@ public class Main {
                 break;
         }
 
-        if((second-first)%7 < num) {
-            System.out.println((second-first)/7+1);
+        int cnt = 0;
+        for(int i=1; i<=second-first+1; i++) {
+            if(i%7==num) {
+                cnt++;
+            }
         }
-        else {
-            System.out.println((second-first)/7);
-        }
+
+        System.out.println(cnt);
     }
 }
