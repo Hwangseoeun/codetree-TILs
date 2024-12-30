@@ -6,12 +6,12 @@ public class Main {
 
         int n = sc.nextInt();
 
-        int[] bin = new int[n];
+        int[] bin = new int[17];
         int cnt = 0;
 
         while(true) {
             if(n<2) {
-                bin[cnt++] = n%2;
+                bin[cnt++] = n;
                 break;
             }
 
