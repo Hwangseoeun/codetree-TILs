@@ -7,7 +7,7 @@ public class Main {
         int N = sc.nextInt();
         int B = sc.nextInt();
 
-        int[] dig = new int[4];
+        int[] dig = new int[5];
         int cnt = 0;
         while(true) {
             if(N<B) {
