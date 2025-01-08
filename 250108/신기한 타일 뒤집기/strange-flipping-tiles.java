@@ -18,7 +18,7 @@ public class Main {
                     tile[j] = "WHITE";
                 }
 
-                cur -= num+1;
+                cur -= num-1;
             }
 
             else {
