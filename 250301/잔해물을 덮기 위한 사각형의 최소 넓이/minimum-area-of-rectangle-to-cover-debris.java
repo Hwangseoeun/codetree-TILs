@@ -53,6 +53,11 @@ public class Main {
             }
         }
 
-        System.out.println((maxX-minX+1)*(maxY-minY+1));
+        if((maxX-minX+1)*(maxY-minY+1)>=1999*1999) {
+            System.out.println("0");
+        }
+        else {
+            System.out.println((maxX-minX+1)*(maxY-minY+1));
+        }
     }
 }
