@@ -12,12 +12,12 @@ public class Main {
         for(int i=0; i<N; i++) {
             num[i] = sc.nextInt();
 
-            if(i==0 || (num[i-1]<0 && num[i]>0) || (num[i-1]>0 && num[i]<0)) {
-                cnt = 1;
-            }
-            else {
+            if(i==0 || (num[i-1]<0 && num[i]<0) || (num[i-1]>0 && num[i]>0)) {
                 cnt++;
                 max = Math.max(max, cnt);
+            }
+            else {
+                cnt = 1;
             }
         }
 
