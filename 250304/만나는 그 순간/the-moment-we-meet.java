@@ -1,0 +1,78 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+
+        int[] NList = new int[1000000];
+        int[] MList = new int[1000000];
+        int cnt = 0, idx = 0;
+
+        for(int i=0; i<N; i++) {
+            String d = sc.next();
+            int b = sc.nextInt();
+
+            if(d.equals("L")) {
+                for(int j=idx; j<idx+b; j++) {
+                    cnt--;
+                    NList[j] = cnt;
+                }
+            }
+            else {
+                for(int k=idx; k<idx+b; k++) {
+                    cnt++;
+                    NList[k] = cnt;
+                }
+            }
+
+            idx += b;
+        }
+
+        cnt = 0;
+        idx = 0;
+
+        for(int i=0; i<M; i++) {
+            String d = sc.next();
+            int b = sc.nextInt();
+
+            if(d.equals("L")) {
+                for(int j=idx; j<idx+b; j++) {
+                    cnt--;
+                    MList[j] = cnt;
+                }
+            }
+            else {
+                for(int k=idx; k<idx+b; k++) {
+                    cnt++;
+                    MList[k] = cnt;
+                }
+            }
+
+            idx += b;
+        }
+
+        int len = 0;
+        if(NList.length > MList.length) {
+            len = NList.length;
+        }
+        else {
+            len = MList.length;
+        }
+
+        boolean type = false;
+        for(int i=0; i<len; i++) {
+            if(NList[i] == MList[i]) {
+                type = true;
+                System.out.println(i+1);
+                break;
+            }
+        }
+
+        if(type == false) {
+            System.out.println("-1");
+        }
+    }
+}
