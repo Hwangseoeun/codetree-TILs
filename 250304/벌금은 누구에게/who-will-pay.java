@@ -20,6 +20,7 @@ public class Main {
             if(student[num] == K) {
                 fine = true;
                 System.out.println(num);
+                break;
             }
         }
 
