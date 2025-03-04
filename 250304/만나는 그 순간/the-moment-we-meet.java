@@ -9,7 +9,7 @@ public class Main {
 
         int[] NList = new int[1000000];
         int[] MList = new int[1000000];
-        int cnt = 0, idx = 0;
+        int cnt = 0, idx = 0, Nlen = 0, Mlen = 0, len = 0;
 
         for(int i=0; i<N; i++) {
             String d = sc.next();
@@ -30,6 +30,8 @@ public class Main {
 
             idx += b;
         }
+
+        Nlen = idx;
 
         cnt = 0;
         idx = 0;
@@ -54,12 +56,13 @@ public class Main {
             idx += b;
         }
 
-        int len = 0;
-        if(NList.length > MList.length) {
-            len = NList.length;
+        Mlen = idx;
+
+        if(Nlen >Mlen) {
+            len = Nlen;
         }
         else {
-            len = MList.length;
+            len = Mlen;
         }
 
         boolean type = false;
