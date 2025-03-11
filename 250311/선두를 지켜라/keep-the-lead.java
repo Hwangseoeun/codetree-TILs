@@ -47,14 +47,15 @@ public class Main {
         // System.out.println();
 
         boolean[] head = new boolean[aLen];
+        head[0] = true;
         for(int i=1; i<aLen; i++) {
             if(A[i]>B[i]) {
-                head[i] = true;
+                head[i] = head[0];
             }
             else if(A[i]<B[i]) {
-                head[i] = false;
+                head[i] = !head[0];
             }
-            else if(A[i]==B[i] && i!=1){
+            else {
                 head[i] = head[i-1];
             }    
         }
