@@ -46,10 +46,30 @@ public class Main {
             bIdx += t;
         }
 
+        for(int i=aIdx; i<A.length; i++) {
+            A[i] = A[aIdx];
+        }
+
+        for(int i=bIdx; i<B.length; i++) {
+            B[i] = B[bIdx];
+        }
+
+/*
+        for(int i=0; i<=aIdx+3; i++) {
+            System.out.print(A[i] + " ");
+        }
+        System.out.println();
+
+        for(int i=0; i<=bIdx+3; i++) {
+            System.out.print(B[i] + " ");
+        }
+        System.out.println();
+*/
+
         int cnt = 0;
 
-        for(int i=1; i<Math.max(aIdx, bIdx)-1; i++) {
-            if(A[i-1]==A[i+1] && A[i]!=A[i+1]) {
+        for(int i=1; i<Math.max(aIdx, bIdx); i++) {
+            if(A[i-1]!=B[i-1] && A[i]==B[i]) {
                 cnt++;
             }
         }
