@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] A = new int[1000000];
-        int[] B = new int[1000000];
+        int[] A = new int[2000000];
+        int[] B = new int[2000000];
 
         int N = sc.nextInt();
         int M = sc.nextInt();
